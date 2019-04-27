@@ -1,2 +1,4 @@
 .idea/*
 *.db
+.idea/vcs.xml
+__pycache__/
