@@ -1,7 +1,7 @@
 <html>
 <head>
 
-<link rel="stylesheet" href="login.css">
+<link rel="stylesheet" href="{{ url_for('static',filename='styles/login.css') }}">
 </head>
 
 <body>
@@ -12,12 +12,14 @@
       <img src="https://www.fabulous-stives.co.uk/wp-content/uploads/2018/03/WELCOME-ST-IVES.jpg" id="icon" alt="User Icon" />
     </div>
 
-   <form>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password">
+   <form action="" method="post">
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" value="{{request.form.login}}">
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" value="{{request.form.password}}">
       <input type="submit" class="fadeIn fourth" value="Log In">
     </form>
-
+    {% if error %}
+      <p class="error"><strong>Error:</strong>{{error}}</p>
+    {% endif %}
     <div id="formFooter">
       <a class="underlineHover" href="#">Forgot Password?</a>
     </div>
