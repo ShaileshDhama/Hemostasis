@@ -16,8 +16,6 @@
         }
     }	
 
-
-
 	function change(){
 		a=showPosition();
 		document.getElementById("btn1").value=showPosition();
@@ -35,21 +33,25 @@
      <img src=" https://media.istockphoto.com/vectors/bright-rainbow-paint-splash-vector-vector-id914219584" id="icon" alt="User Icon" />
      </div>
 
-   <form>
-   	  <input type="text" id="name" class="fadeIn second" name="" placeholder="Full Name" required>
-      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" required>
-      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" required>
-      <input type="text" id="country" class="fadeIn second" placeholder="country">
-      <input type="tel" id="phone" name="phone" class="fadeIn Third" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+   <form action="" method="post">
+       <input type="text" id="name" class="fadeIn second" name="name" placeholder="name" value="{{request.form.name}}" required>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" value="{{request.form.login}}" required>
+      <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" value="{{request.form.password}}" required>
+      <input type="text" id="country" class="fadeIn second" name="country" placeholder="country" value="{{request.form.country}}">
+      <input type="tel" id="phone" name="phone" class="fadeIn Third" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="phone" value="{{request.form.phone}}" required>
            
       <div id="result" class="fadeIn third">
    	  <br>	<!--position of latitude and longitude here, you can get it by id 'result'--> 
       </div>
 	 <!-- <input  type="button" onclick="change()" value="location" id="btn1"> -->
-     <br><input type="button" onclick="showPosition();" value="Use My location">
+     <br><input type="button" id="btn1" onclick="showPosition();" value="Use My location">
       <input type="submit" class="fadeIn fourth" value="Register">
     </form>
-
+    {% if register == True %}
+      <p class="success">Registration Successful</p>
+    {% elif register == True %}
+      <p class="success">Registration Failed. Please try again!</p>
+    {% endif %}
    </div>
 </div>
 </body>
