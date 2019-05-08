@@ -6,7 +6,68 @@
 <script type="text/javascript">
 
     function showPosition(){
+        if(navigator.geolocation){<html>
+<head>
+
+<link rel="stylesheet" href="..\static\styles\login.css">
+
+<script type="text/javascript">
+
+    function showPosition(){
         if(navigator.geolocation){
+            navigator.geolocation.getCurrentPosition(function(position){
+                var positionInfo = "<br>Latitude: " + position.coords.latitude + "<br> " + "Longitude: " + position.coords.longitude;
+                document.getElementById("result").innerHTML = positionInfo;
+            });
+        } else{
+            alert("Sorry, your browser does not support HTML5 geolocation.");
+        }
+    }	
+
+
+
+	function change(){
+		a=showPosition();
+		document.getElementById("btn1").value=showPosition();
+	}
+
+</script>
+
+</head>
+
+<body>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+
+    <div class="fadeIn first">
+    
+     <img src=" https://images-eu.ssl-images-amazon.com/images/I/71Sff8klXXL.jpg" id="icon" alt="User Icon" />
+     </div>
+
+   <form>
+   	  <input type="text" id="name" class="fadeIn second" name="" placeholder="Full Name" required>
+      <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" required>
+      <input type="password" id="password" class="fadeIn third" name="login" placeholder="password" required>
+      <input type="text" id="country" class="fadeIn second" placeholder="country">
+      <input type="tel" id="phone" name="phone" class="fadeIn Third" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+           
+      <div id="result" class="fadeIn third">
+   	  <br>	<!--position of latitude and longitude here, you can get it by id 'result'--> 
+      </div>
+	 <!-- <input  type="button" onclick="change()" value="location" id="btn1"> -->
+     <br><input type="button" onclick="showPosition();" value="Use My location">
+      <input type="submit" class="fadeIn fourth" value="Register">
+    </form>
+
+    <div id="formFooter">
+      <a class="underlineHover" href="login.html">Sign in</a>
+    </div>
+
+   </div>
+</div>
+</body>
+</html>
+
             navigator.geolocation.getCurrentPosition(function(position){
                 var positionInfo = "<br>Latitude: " + position.coords.latitude + "<br> " + "Longitude: " + position.coords.longitude;
                 document.getElementById("result").innerHTML = positionInfo;
