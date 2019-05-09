@@ -28,7 +28,7 @@ def register():
         password = request.form['password']
         country = request.form['country']
         phone = request.form['phone']
-        location = "location"
+        location = request.form['location']
         register = register_user(userid, name, password, country, phone, location)
     return render_template('register.html', register = register)
 
@@ -57,7 +57,7 @@ def register_user(userid, name, password, country, phone, location):
         c.execute("INSERT INTO users (userid, name, password, country, phone, location) VALUES (?, ?, ?, ?, ?, ?)",
                   (userid, name, password, country, phone, location))
         conn.commit()
-        print("record inswertion succesful")
+        print("record insertion succesful")
     except:
         register = False
     finally:
