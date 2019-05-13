@@ -29,7 +29,8 @@ def register():
         country = request.form['country']
         phone = request.form['phone']
         location = request.form['location']
-        register = register_user(userid, name, password, country, phone, location)
+        certified = "False"
+        register = register_user(userid, name, password, country, phone, location, certified)
     return render_template('register.html', register = register)
 
 
@@ -49,13 +50,13 @@ def validate_login(id, pwd):
     conn.close()
     return login
 
-def register_user(userid, name, password, country, phone, location):
+def register_user(userid, name, password, country, phone, location, certified):
     register = True
     conn = sqlite3.connect('stopthebleed.db')
     c = conn.cursor()
     try:
-        c.execute("INSERT INTO users (userid, name, password, country, phone, location) VALUES (?, ?, ?, ?, ?, ?)",
-                  (userid, name, password, country, phone, location))
+        c.execute("INSERT INTO users (userid, name, password, country, phone, location, certified) VALUES (?, ?, ?, ?, ?, ?, ?)",
+                  (userid, name, password, country, phone, location, certified))
         conn.commit()
         print("record insertion succesful")
     except:
