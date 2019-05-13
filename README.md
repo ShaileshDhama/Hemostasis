@@ -11,7 +11,7 @@ email, phone, address, state, zip, country.. etc
 
 run the ``python database.py``
 
-It will create a ``users`` table with 3 fields username, name, password
+It will create a ``users`` table with 7 fields username, name, password, country, phone, location, certified.
 
 for testing purposes I have created another function which will insert 2 records in the table.
 once you run it you will have ``stopthebleed.db`` file. To open it and see records use a DB browser for sqllite
