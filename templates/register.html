@@ -39,7 +39,7 @@
       <input type="text" id="login" class="fadeIn second" name="login" placeholder="login" value="{{request.form.login}}" required>
       <input type="password" id="password" class="fadeIn third" name="password" placeholder="password" value="{{request.form.password}}" required>
       <input type="text" id="country" class="fadeIn second" name="country" placeholder="country" value="{{request.form.country}}">
-      <input type="tel" id="phone" name="phone" class="fadeIn Third" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="phone" value="{{request.form.phone}}" required>
+      <input type="tel" id="phone" name="phone" class="fadeIn Third" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="phone" value="{{request.form.phone}}" title="please match the pattern xxx-xxx-xxxx" required>
            
       <div id="result" class="fadeIn third">
    	  <br>	<!--position of latitude and longitude here, you can get it by id 'result'--> 
@@ -51,6 +51,7 @@
     </form>
     {% if register == True %}
       <p class="success">Registration Successful</p>
+      <a class="underlineHover" href="/">login?</a>
     {% elif register == False %}
       <p class="failure">Registration Failed. Please try again!</p>
     {% endif %}
