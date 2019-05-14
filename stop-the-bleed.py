@@ -10,14 +10,15 @@ def user_login():
         password = request.form['password']
         allow_login = validate_login(login, password)
         if allow_login:
-            return redirect(url_for('welcome'))
+            return redirect(url_for('train'))
         else:
             error = 'Invalid credentials'
     return render_template('login.html', error=error)
 
-@app.route('/welcome')
-def welcome():
-    return render_template('welcome.html')
+
+@app.route('/train')
+def train():
+    return render_template('train.html')
 
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
