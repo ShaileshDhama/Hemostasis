@@ -20,6 +20,35 @@ def user_login():
 def train():
     return render_template('train.html')
 
+@app.route('/overview')
+def overview():
+    return render_template('overview.html')
+
+@app.route('/Applications')
+def Applications():
+    return render_template('Applications.html')
+
+@app.route('/methods')
+def methods():
+    return render_template('methods.html')
+
+@app.route('/nearby')
+def nearby():
+    return render_template('nearby.html')
+
+@app.route('/discussions')
+def discussions():
+    return render_template('discussions.html')
+
+@app.route('/quiz')
+def quiz():
+    return render_template('quiz.html')
+
+@app.route('/welcome')
+def welcome():
+    return render_template('welcome.html')
+
+
 @app.route('/register', methods = ['GET', 'POST'])
 def register():
     register = None
