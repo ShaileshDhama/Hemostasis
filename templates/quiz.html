@@ -1,27 +1,117 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link type='text/css' rel='stylesheet' href='..\static\styles\stylesheet.css'/>
-		
-		
-	</head>
-	<body>
-		<div id='container'>
-			<div id='title'>
-			<h1>Tesy Your Skill</h1>
-			</div>
-   			<br/>
-  			<div id='quiz'></div>
-    		<div class='button' id='next'><a href='#'>Next</a></div>
-    		<div class='button' id='start'> <a href='#'>Start Over</a></div>
-    		<!-- <button class='' id='next'>Next</a></button>
-    		<button class='' id='prev'>Prev</a></button>
-    		<button class='' id='start'> Start Over</a></button> -->
-    	</div>
+<head>
 
-		<script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
-		<script type="text/javascript" src='..\static\styles\questions.json'></script>
-		<script type='text/javascript' src='..\static\styles\jsquiz.js'></script>
 
-	</body>
-</html>
+<link rel="stylesheet" href="..\static\styles\login.css">
+
+<style>
+html {
+   background-color: white;
+ 
+}
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:#818181  ;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: black;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+  
+<link type='text/css' rel='stylesheet' href='..\static\styles\stylesheet.css'/>
+  
+</head>
+<body>
+
+  <div class="sidenav">
+  <img src="http://stopthebleed.in/stopthebleed.png" id="icon" alt="Stop-The-Bleed" style="max-height: 55%; max-width: 55%;" />
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="welcome.html">Home</a>
+<br>  <a href="overview.html">Overview</a>
+<br>  <a href="Applications.html">Applications</a>
+<br>  <a href="methods.html">Methods</a>
+<br>  <a href="nearby.html">Find Nearby</a>
+<br>  <a href="discussions.html">Discussion</a>
+<br>  <a href="quiz.html">Take a quiz- Become Verified</a>
+</div>
+
+<div class="main">
+
+ <br><br><hr color="#56baed">
+ </p>
+
+ <hr color="#56baed"> 
+ 
+    <div id='container'>
+      <div id='title'>
+      <h1>Tesy Your Skill</h1>
+      </div>
+        <br/>
+        <div id='quiz'></div>
+        <div class='button' id='next'><a href='#'>Next</a></div>
+        <div class='button' id='start'> <a href='#'>Start Over</a></div>
+        <!-- <button class='' id='next'>Next</a></button>
+        <button class='' id='prev'>Prev</a></button>
+        <button class='' id='start'> Start Over</a></button> -->
+      </div>
+
+    <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'></script>
+    <script type="text/javascript" src='..\static\styles\questions.json'></script>
+    <script type='text/javascript' src='..\static\styles\jsquiz.js'></script>
+    
+
+
+
+</body>
+</html> 
+
