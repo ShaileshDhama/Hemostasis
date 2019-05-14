@@ -1,10 +1,137 @@
+<!DOCTYPE html>
 <html>
-
 <head>
+
+
+<link rel="stylesheet" href="..\static\styles\login.css">
+
+<style>
+html {
+	 background-color: white;
+ 
+}
+body {
+  font-family: "Lato", sans-serif;
+  transition: background-color .5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 24px;
+  color: #f1f1f1;
+  display: block;
+}
+
+.sidenav a:hover {
+  color:#818181	 ;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+h3 {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  display:inline-block;
+  margin: 40px 8px 10px 8px; 
+  color: black;
+}
+
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
 </head>
-
 <body>
-  dummy file
-</body>
+<div id="formHeader" style="margin:0;">
+    <hr color="#56baed">
+    <div class='button' id='next'><a href='welcome.html'>Next Page</a></div>
+</div>
+  <div class="sidenav">
+  <img src="http://stopthebleed.in/stopthebleed.png" id="icon" alt="Stop-The-Bleed" style="max-height: 55%; max-width: 55%;" />
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+  <a href="welcome.html">Home</a>
+<br>  <a href="overview.html">Overview</a>
+<br>  <a href="Applications.html">Applications</a>
+<br>  <a href="methods.html">Methods</a>
+<br>  <a href="nearby.html">Find Nearby</a>
+<br>  <a href="discussions.html">Discussion</a>
+<br>  <a href="quiz.html">Take a quiz- Become Verified</a>
+</div>
 
-</html>
+<div class="main">
+
+ <br><br><hr color="#56baed">
+ <h1>Tutorial head</h1>
+ <p>Click on the element below to open the side navigation menu, and push this content to the right. Notice that we add a black see-through background-color to body when the sidenav is opened.</p>
+
+ <hr color="#56baed"> 
+ <h1>How to stop the bleeding</h1>
+		      <p>1.If someone near you is injured you should
+									"check that you and the casualty aren't in any danger"
+									"dial 999 or 112 for an ambulance when it's safe to do"</p>
+
+					<p>2.If a person is unconscious but breathing,you should
+									"place them in the recovery position until help arrives"
+									"Keep them under observation to ensure they continue to breathe normally,and don't obstruct their airway"</p>
+
+					<p>3.If a person isn't breathing normally after an accident
+									"Call an ambulance and start CPR straight away"
+									"Use hands-only CPR if you aren't trained to perform rescue breaths"</p>
+
+					<p>4.If a person gets Anaphlysis,you should
+									"Call an ambulance immediately if you think someone is experiencing anaphylactic shock"
+									"Check if the person is carrying any adrenaline self-injector"</p>
+
+					<p>5.If someone is bleeding heavily,
+									"Call an ambulance as soon as possible"
+									"Check that there's nothing embedded in the wound"
+									"Use a clean dressing to bandage the wound firmly"</p>
+	
+
+
+
+<div id="formFooter" style="bottom:0; position:absolute; width:100%;">
+ 		<hr color="#56baed">
+		<div class='button' id='next'><a href='welcome.html'>Next Page</a></div>
+</div>
+		
+	
+
+</body>
+</html> 
+
+
+
+
+
+
+
+
+
